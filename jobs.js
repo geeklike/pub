@@ -3,17 +3,15 @@ import $ from 'jquery';
 let jobs = [{
     companies: [ 
         {   
-            id: "J3",
-            company: "Calldorado",
-            place: "Kongens Lyngby​",
-            title: "Full Stack Developer",
-            time: "September 2017 - March 2020",
-            notes : "I developed, maintained and deployed everything regarding the WordPress sites, static PHP websites, and C# ASP.NET websites. I was also in charge of maintaining the Linux servers and the NGINX setup.",
+            id: "J0",
+            company: "Company",
+            place: "Place​",
+            title: "Job Description",
+            time: "Start time - End time",
+            notes : "Description of what I did",
             websites: [ 
-                "https://calldorado.com",
-                "https://my.calldorado.com",
-                "https://appvestor.com",
-                "https://my.appvestor.com"
+                "https://website1.com",
+                "https://website2.com"
             ]
         }
     ],
