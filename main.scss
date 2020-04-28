@@ -1,0 +1,270 @@
+@import 'vars';
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:ital,wght@0,300;0,500;1,500&display=swap');
+
+html, body {
+  font-size: 16px;
+}
+
+body {
+  font-family: $font-stack;
+  color: $primary-color;
+  background-color: $background-color;
+}
+
+a,
+.cta,
+li:hover
+{
+  color: $accent-color;
+  transition: all .3s ease-in-out 0s;
+}
+
+a:hover,
+a:active {
+  color: $hover-color;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a::before,
+ul.skills li::before {
+  content: attr(title);
+  font-weight: 500;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+li.active {
+  color: $active-skill-color;
+  background-color: $active-skill-background-color !important;
+}
+
+h1, h2, h3 {
+  color: $header-tag-color;
+  font-family: $alt-font-stack;
+}
+
+h1 {
+  border-bottom: 3px solid $header-tag-color;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+h2 {
+  text-transform: uppercase;
+  margin-top: 1em;
+}
+
+h3 {
+  margin-top: 15px;
+  font-size: 1.4em;
+
+  @media screen and (min-width: 576px) { 
+    .col-sm-auto:first-of-type {
+      padding-right: 0;
+    }
+  
+    .col-sm-auto:not(:first-of-type) {
+      padding: 0;
+    }
+  }
+}
+
+h3.skills {
+  font-size: 1.1em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+p {
+  font-weight: 300;
+}
+
+ul.skills {
+  list-style-type: none;
+  margin: 15px 0;
+}
+
+ul#skills_daily.skills,
+ul#skills_sometimes.skills {
+  padding: 0 10px;
+}
+
+ul.skills { 
+  li:hover {
+    background-color: $skill-hover-background-color;
+    cursor: pointer;
+  }
+
+  li {
+    display: inline-flex;
+    padding: 10px;
+    background-color: $skill-background-color;
+    border-radius: 40px;
+    line-height: 1;
+    margin: 5px;
+    font-size: 0.9em;
+    transition: all .3s ease-in-out 0s;
+  }
+}
+
+#main {
+  padding-top: 1em;
+
+  @media screen and (min-width: 768px) {
+      padding-top: 6em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 100% !important;
+  }
+}
+
+.companies,
+.schools {
+  padding-bottom: 5px;
+
+  .websites {
+    font-size: 80%;
+    margin-top: -15px;
+  }
+
+  .skills {
+    padding: 0 15px;
+  }
+
+  .skills li {
+    font-size: 0.7em;
+    margin: 2px;
+    line-height: 0.7em;
+  }
+}
+
+header,
+footer {
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  p {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    margin: 0;
+    color: $header-p-color;
+    font-weight: 300;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 1em;
+
+    p:not(:last-of-type) {
+      padding-bottom: 5px;
+    }
+  }
+}
+
+header {
+  p {
+    @media screen and (min-width: 768px) {
+      letter-spacing: 0.1em;
+    }
+
+    @media screen and (min-width: 992px) {
+      letter-spacing: 0.3em;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 25px 0;
+    position: fixed;
+    background-color: $background-color;
+    z-index: 99;
+    width: 100%;    
+  }
+}
+
+footer {
+  margin-top: 3em;
+}
+
+.title {
+  color: $title-color;
+  font-weight: 500;
+  font-style: italic;
+
+  @media screen and (max-width: 991px) {
+    display: flex;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+}
+
+h2,
+#email,
+.time {
+  text-transform: uppercase;
+}
+
+#toTop {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    background: $skill-background-color;
+    position: fixed;
+    cursor: pointer;
+    width: 3em;
+    height: 3em;
+    right: 1em;
+    bottom: 1em;
+    border-radius: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      font-size: 1.2em;
+      margin-top: -2px;
+    }
+  }
+}
+
+#topTop:hover {
+  background-color: $skill-hover-background-color;
+  color: $hover-color;
+}
+
+
+@media screen and (max-width: 575px) { 
+  .company,
+  .place {
+    display: flex;
+  }
+}
+
+
+// Socials
+.socials {
+  border-radius: 6px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkedin {
+  background: $active-skill-background-color;
+
+  &:hover {
+    background: $linkedin-color;}
+
+  i {
+    color: #FFF;
+  }
+}
